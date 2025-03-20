@@ -1,6 +1,7 @@
 {
   "name": "react-copy",
   "version": "0.1.0",
+  "homepage": "https://reddy7569.github.io/Genai",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start:frontend": "react-scripts start",
     "start:backend": "cd ../backend && node index.js",
     "build": "react-scripts build",
